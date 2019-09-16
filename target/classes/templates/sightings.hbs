@@ -1,0 +1,99 @@
+{{#partial "content"}}
+    <div style="background:#dee0e0; padding:10px;font-family: 'Patua One', cursive;"> <h5>ANIMALS IN THE AREA</h5></div>
+    <div class="animals-container">
+        {{#if sighting}}
+            {{#each sighting }}
+                <div class="card card-transparent">
+                    <div class="card-body">
+                        <div class="attributes">
+                            <div class="animal-attributes" style="font-size:15px;">
+                                <img class="avatar" src="/images/animals/{{animal_id}}.jpeg"><br>
+                            </div>
+
+                            <div class="animal-attributes">
+                                <a><h1 style="font-family: 'Patua One', cursive;text-transform: uppercase;">Lion</h1></a>
+                                <p><b>Sighting reported in:</b> {{ location }}</p>
+                                <p><b>Spotted by:</b> Ranger Ranger</p>
+
+
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            {{/each}}
+        {{else}}
+            <p>No Players Yet!</p>
+        {{/if}}
+    </div>
+{{/partial}}
+
+{{> layout.hbs}}
+
+<style>
+    .animals-container{
+    padding: 50px;
+}
+
+
+h4{
+text-align:center;
+color: white;
+}
+.card{
+text-transform: uppercase;
+    margin:10px;
+    padding:8px;
+    width:430px;
+    font-size:15px;
+}
+
+.attributes{
+    display: -webkit-flex;
+    -webkit-flex-direction: row;
+    display: flex;
+    flex-direction: row;
+}
+.avatar{
+    padding:8px;
+padding-right:20px;
+height:200px;
+width:200px;
+}
+
+.squad-logo{
+height: 50px;
+weight: 50px;
+}
+
+.btn{
+font-family: 'Coda', cursive;
+text-transform: uppercase;
+height:60px;
+font-size:14px;
+width:100%;
+}
+
+table{
+
+text-transform: uppercase;
+font-family: 'Coda', cursive;
+font-size:12px;
+width:100%;
+}
+tr{
+padding:0px;
+}
+.animal-attributes{
+font-family: 'Coda', cursive;
+padding:5px;
+}
+.table-condensed>thead>tr>th, .table-condensed>tbody>tr>th, .table-condensed>tfoot>tr>th, .table-condensed>thead>tr>td, .table-condensed>tbody>tr>td, .table-condensed>tfoot>tr>td {
+padding: 6px;
+}
+</style>
