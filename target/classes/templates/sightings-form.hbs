@@ -1,21 +1,99 @@
 {{#partial "content"}}
 
-    <h1>Create a Hero!</h1>
+    <h1>Report A Sighting</h1>
 
     <form action="/sightings" method="post">
-        <label for="animal_id">Animal ID</label>
-        <input id="animal_id" name="name" type="text"><br>
-
-        <label for="location">Location</label>
-        <input id="location" name="location" type="text"><br>
-
-        <label for="ranger">Ranger</label>
-        <input id="ranger" name="ranger" type="text"><br>
 
 
+        <div class="form-group">
+            <label for="animal_name">Animal</label>
+            <select id="animal_name" class="form-control" list="animals" name="animal_name">
 
-        <button type="submit" class="btn btn-default">Record Sighting</button>
+                {{#if animal}}
+                    {{#each animal }}
+                        <option>{{ name }}</option>
+                    {{/each}}
+                {{else}}
+                    <option>Error Loading Animals</option>
+                {{/if}}
+            </select>
+
+
+        </div>
+
+        <div class="form-group">
+            <label for="location">Location</label>
+            <input id="location" class="form-control" list="locations" name="locations">
+            <datalist id="locations">
+                <option value="Zone A">
+                <option value="Zone B">
+                <option value="Zone C">
+                <option value="Zone D">
+                <option value="Zone E">
+            </datalist>
+        </div>
+
+        <div class="form-group">
+            <label for="ranger">Ranger</label>
+            <input id="ranger" class="form-control" name="ranger" type="text"><br>
+        </div>
+
+
+        <button type="submit" class="btn btn-primary">Record Sighting</button>
     </form>
 {{/partial}}
 
 {{> layout.hbs}}
+
+<style>
+
+
+
+.form-group{
+margin:20px;
+}
+h4{
+text-transform: uppercase;
+color:white;
+font-family: 'Coda', cursive;
+text-align:center;
+padding:20px;
+}
+.card{
+
+    margin:100px;
+    padding:15px;
+    width:50%;
+    font-size:15px;
+    margin-left:25%;
+}
+
+.card-body{
+    display: -webkit-flex;
+    -webkit-flex-direction: row;
+    display: flex;
+    flex-direction: row;
+}
+
+
+.btn{
+font-family: 'Coda', cursive;
+text-transform: uppercase;
+height:60px;
+font-size:18px;
+width:100%;
+}
+
+.table-striped{
+margin:20px;
+width:200px;
+}
+
+.tables{
+font-family: 'Coda', cursive;
+text-align: right;
+text-transform: uppercase;
+font-size:12px;
+color:white;
+}
+</style>

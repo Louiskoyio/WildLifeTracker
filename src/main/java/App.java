@@ -5,13 +5,10 @@ import models.Sighting;
 import org.sql2o.Sql2o;
 import spark.ModelAndView;
 import spark.template.handlebars.HandlebarsTemplateEngine;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
-import static spark.Spark.get;
-import static spark.Spark.staticFileLocation;
+import java.util.*;
+
+import static spark.Spark.*;
 
 public class App {
     public static void main(String[] args) {
@@ -39,11 +36,32 @@ public class App {
             return new ModelAndView(model, "sightings.hbs");
         }, new HandlebarsTemplateEngine());
 
+        get("/endangered", (req, res) -> {
+            Map<String, Object> model = new HashMap<>();
+            List<Endangered> endangered = endangeredDao.getAll();
+            model.put("endangered", endangered);
+            return new ModelAndView(model, "endangered.hbs");
+        }, new HandlebarsTemplateEngine());
+
         get("/sightings/new", (req, res) -> {
             Map<String, Object> model = new HashMap<>();
             List<Sighting> sighting = sightingDao.getAll();
+            List<Animal> animal = animalDao.getAll();
             model.put("sighting", sighting);
+            model.put("animal", animal);
             return new ModelAndView(model, "sightings-form.hbs");
+        }, new HandlebarsTemplateEngine());
+
+        post("/sightings", (req, res) -> { //URL to make new task on POST route
+            Map<String, Object> model = new HashMap<>();
+            String animal_name = req.queryParams("animal_name");
+            String ranger_name =  req.queryParams("ranger_name");
+            String location = req.queryParams("location");
+            System.out.println(location);
+            Sighting newSighting = new Sighting(animal_name,location,ranger_name);
+            sightingDao.add(newSighting);
+            res.redirect("/sightings");
+            return null;
         }, new HandlebarsTemplateEngine());
     }
 

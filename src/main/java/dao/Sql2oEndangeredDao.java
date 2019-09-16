@@ -14,7 +14,7 @@ public class Sql2oEndangeredDao implements EndangeredDao{
     @Override
     public List<Endangered> getAll() {
         try (Connection con = sql2o.open()) {
-            return con.createQuery("SELECT * FROM players") //raw sql
+            return con.createQuery("SELECT * FROM endangered") //raw sql
                     .throwOnMappingFailure(false).executeAndFetch(Endangered.class); //fetch a list
         }
     }
@@ -22,7 +22,7 @@ public class Sql2oEndangeredDao implements EndangeredDao{
     @Override
     public Endangered findById(int id) {
         try (Connection con = sql2o.open()) {
-            return con.createQuery("SELECT * FROM players WHERE id = :id")
+            return con.createQuery("SELECT * FROM endangered WHERE id = :id")
                     .addParameter("id", id) //key/value pair, key must match above
                     .throwOnMappingFailure(false)
                     .executeAndFetchFirst(Endangered.class); //fetch an individual item

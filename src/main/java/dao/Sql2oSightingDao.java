@@ -21,14 +21,10 @@ public class Sql2oSightingDao implements SightingDao{
 
     @Override
     public void add(Sighting sighting) {
-        String sql = "INSERT INTO sightings (name,age,special_power,weakness,squad_id,overall_rating,position,attack,defence,chemistry,passing,physical) VALUES (:name,:age,:special_power,:weakness,:squad_id,:overall_rating,:position,:attack,:defence,:chemistry,:passing,:physical)"; //raw sql
-        System.out.println(sql);
+        String sql = "INSERT INTO sightings (animal_name,location,ranger_name) VALUES (:animal_name,:location,:ranger_name)";
         try(Connection con = sql2o.open()){ //try to open a connection
-            int id = (int) con.createQuery(sql, true) //make a new variable
-                    .bind(sighting)
-                    .executeUpdate() //run it all
-                    .getKey(); //int id is now the row number (row “key”) of db
-            sighting.setId(id);
+            con.createQuery(sql) //make a new variable
+                    .executeUpdate();
 
         } catch (Sql2oException ex) {
             System.out.println(ex); //oops we have an error!

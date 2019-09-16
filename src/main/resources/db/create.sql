@@ -7,8 +7,3 @@ create table if not exists sightings (animal_id serial PRIMARY KEY, location var
 create table if not exists endangered (id serial PRIMARY KEY, name varchar,health varchar, age integer);
 
 
-lion
-leopard
-cheetah
-rhino
-elephant

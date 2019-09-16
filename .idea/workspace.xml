@@ -2,9 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f4cc3e2-bd6a-486b-a549-d7af9e72cd56" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/endangered.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/sightings.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/sightings.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/Sql2oEndangeredDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/Sql2oEndangeredDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/Sql2oSightingDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/Sql2oSightingDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Sighting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Sighting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/create.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/create.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/sightings-form.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/sightings-form.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dao/Sql2oEndangeredDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/Sql2oEndangeredDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dao/Sql2oSightingDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/Sql2oSightingDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/db/create.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/db/create.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/models/Sighting.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/models/Sighting.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/sightings-form.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/sightings-form.hbs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -82,7 +93,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
