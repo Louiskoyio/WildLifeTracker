@@ -13,7 +13,56 @@
                             <div class="animal-attributes">
                                 <a><h1 style="font-family: 'Patua One', cursive;text-transform: uppercase;">{{ name }}</h1></a>
                                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sightingModal{{id}}">Report Sighting</button>
-                                <button type="button" class="btn btn-danger">Make Endangered</button>
+                                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#endangeredModal{{id}}">Make Endangered</button>
+
+                                <div class="modal fade" id="endangeredModal{{id}}" role="dialog">
+                                    <div class="modal-dialog">
+
+                                        <!-- Modal content-->
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h2>MAKE {{name}}s endangered</h2>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form action="/endangered" method="post">
+
+
+                                                    <div class="form-group">
+                                                        <label for="animal_id">Animal ID</label>
+                                                        <input id="animal_id" class="form-control" type="text" value="{{ id }}" placeholder="{{name}}" name="animal_id" readonly>
+
+
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label for="age">Age</label>
+                                                        <select id="age" class="form-control" name="age">
+                                                            <option value="newborn">newborn</option>
+                                                            <option value="young">young</option>
+                                                            <option value="adult">adult</option>
+                                                        </select>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label for="health">Health</label>
+                                                        <select id="health" class="form-control" name="health">
+                                                            <option value="healthy">healthy</option>
+                                                            <option value="ill">ill</option>
+                                                            <option value="okay">okay</option>
+                                                        </select>
+                                                    </div>
+
+
+                                                    <button type="submit" class="btn btn-success">Make endangered</button>
+                                                </form>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
 
 
                                 <div class="modal fade" id="sightingModal{{id}}" role="dialog">

@@ -29,4 +29,20 @@ public class Sql2oAnimalDao implements AnimalDao {
         }
 
     }
+
+    @Override
+    public void makeEndangered(int animal_id, String health, String age) {
+        String sql = "INSERT INTO endangered (animal_id,health,age) VALUES (:animal_id,:health,:age)";
+        try(Connection con = sql2o.open()){ //try to open a connection
+            con.createQuery(sql)
+                    .addParameter("animal_id", animal_id)
+                    .addParameter("health", health)
+                    .addParameter("age", age)
+                    .executeUpdate();
+
+        } catch (Sql2oException ex) {
+            System.out.println(ex); //oops we have an error!
+        }
+
+    }
 }

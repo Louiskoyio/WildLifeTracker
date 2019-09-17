@@ -3,8 +3,18 @@
   <component name="ChangeListManager">
     <list default="true" id="6f4cc3e2-bd6a-486b-a549-d7af9e72cd56" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/AnimalDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/AnimalDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/Sql2oAnimalDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/Sql2oAnimalDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Endangered.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Endangered.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/animals.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/animals.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/endangered.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/endangered.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dao/AnimalDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/AnimalDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dao/Sql2oAnimalDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/Sql2oAnimalDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/models/Endangered.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/models/Endangered.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/animals.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/animals.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/endangered.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/endangered.hbs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

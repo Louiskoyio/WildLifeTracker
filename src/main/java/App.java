@@ -59,6 +59,28 @@ public class App {
             return new ModelAndView(model, "sightings-form.hbs");
         }, new HandlebarsTemplateEngine());
 
+        get("/endangered/add/:animal_id", (req, res) -> {
+            Map<String, Object> model = new HashMap<>();
+            List<Sighting> sighting = sightingDao.getAll();
+            List<Animal> animal = animalDao.getAll();
+            model.put("sighting", sighting);
+            model.put("animal", animal);
+            return new ModelAndView(model, "endangered.hbs");
+        }, new HandlebarsTemplateEngine());
+
+        post("/endangered", (req, res) -> {
+            Map<String, Object> model = new HashMap<>();
+            int animal_id = Integer.valueOf(req.queryParams("animal_id"));
+            String name = (animalDao.findById(animal_id)).getName();
+            String age =  req.queryParams("age");
+            String health = req.queryParams("health");
+            System.out.println(req.queryParams("animal_id"));
+            System.out.println(animal_id);
+            animalDao.makeEndangered(animal_id,health,age);
+            res.redirect("/sightings");
+            return null;
+        }, new HandlebarsTemplateEngine());
+
         post("/sightings", (req, res) -> { //URL to make new task on POST route
             Map<String, Object> model = new HashMap<>();
             int animal_id = Integer.valueOf(req.queryParams("animal_id"));
