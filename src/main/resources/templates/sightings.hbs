@@ -8,8 +8,8 @@
             <th>Spotted By</th>
             <th>Date</th>
             </thead>
-        {{#if sighting}}
-            {{#each sighting }}
+        {{#if sightings}}
+            {{#each sightings }}
                 <tr><td>{{animal_id}}</td>{{location}}<td>{{ranger_name}}</td><td></td><td>Today</td></tr>
             {{/each}}
         {{else}}
