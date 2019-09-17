@@ -9,6 +9,7 @@ public class Sql2oSightingDao implements SightingDao{
 
     private final Sql2o sql2o;
 
+
     public Sql2oSightingDao(Sql2o sql2o) { this.sql2o = sql2o; }
 
     @Override
@@ -23,7 +24,8 @@ public class Sql2oSightingDao implements SightingDao{
     public void add(Sighting sighting) {
         String sql = "INSERT INTO sightings (animal_name,location,ranger_name) VALUES (:animal_name,:location,:ranger_name)";
         try(Connection con = sql2o.open()){ //try to open a connection
-            con.createQuery(sql) //make a new variable
+            con.createQuery(sql)
+                    .bind(sighting)
                     .executeUpdate();
 
         } catch (Sql2oException ex) {
