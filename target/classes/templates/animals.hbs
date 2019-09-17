@@ -13,6 +13,7 @@
                             <div class="animal-attributes">
                                 <a><h1 style="font-family: 'Patua One', cursive;text-transform: uppercase;">{{ name }}</h1></a>
                                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sightingModal{{id}}">Report Sighting</button>
+                                <button type="button" class="btn btn-danger">Make Endangered</button>
 
 
                                 <div class="modal fade" id="sightingModal{{id}}" role="dialog">
@@ -124,10 +125,11 @@ weight: 50px;
 }
 
 .btn{
+margin: 5px;
 font-family: 'Coda', cursive;
 text-transform: uppercase;
-height:60px;
-font-size:14px;
+height:50px;
+font-size:12px;
 width:100%;
 }
 
