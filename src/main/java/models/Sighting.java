@@ -1,18 +1,18 @@
 package models;
 
 public class Sighting {
-    public String animal_name;
+    public int animal_id;
     public String location;
     public String ranger_name;
 
-    public Sighting(String animal_name, String location, String ranger_name) {
-        this.animal_name = animal_name;
+    public Sighting(int animal_name, String location, String ranger_name) {
+        this.animal_id = animal_id;
         this.location = location;
         this.ranger_name = ranger_name;
     }
 
-    public void setId(String animal_id) {
-        this.animal_name = animal_id;
+    public void setId(int animal_id) {
+        this.animal_id = animal_id;
     }
 
     public void setLocation(String location) {

@@ -22,7 +22,7 @@ public class Sql2oSightingDao implements SightingDao{
 
     @Override
     public void add(Sighting sighting) {
-        String sql = "INSERT INTO sightings (animal_name,location,ranger_name) VALUES (:animal_name,:location,:ranger_name)";
+        String sql = "INSERT INTO sightings (animal_id,location,ranger_name) VALUES (:animal_id,:location,:ranger_name)";
         try(Connection con = sql2o.open()){ //try to open a connection
             con.createQuery(sql)
                     .bind(sighting)

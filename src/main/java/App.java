@@ -61,11 +61,12 @@ public class App {
 
         post("/sightings", (req, res) -> { //URL to make new task on POST route
             Map<String, Object> model = new HashMap<>();
-            String animal_name = req.queryParams("animal_name");
+            int animal_id = Integer.valueOf(req.queryParams("animal_id"));
             String ranger_name =  req.queryParams("ranger_name");
             String location = req.queryParams("location");
-            System.out.println(location);
-            Sighting newSighting = new Sighting(animal_name,location,ranger_name);
+            System.out.println(req.queryParams("animal_id"));
+            System.out.println(animal_id);
+            Sighting newSighting = new Sighting(animal_id,location,ranger_name);
             sightingDao.add(newSighting);
             res.redirect("/sightings");
             return null;

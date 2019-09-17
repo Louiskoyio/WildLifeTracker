@@ -6,12 +6,12 @@
 
 
         <div class="form-group">
-            <label for="animal_name">Animal</label>
-            <select id="animal_name" class="form-control" list="animals" name="animal_name">
+            <label for="animal_id">Animal</label>
+            <select id="animal_id" class="form-control" list="animals" name="animal_id">
 
                 {{#if animal}}
                     {{#each animal }}
-                        <option value="{{ name }}">{{ name }}</option>
+                        <option value="{{ id }}">{{ name }}</option>
                     {{/each}}
                 {{else}}
                     <option>Error Loading Animals</option>
