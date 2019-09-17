@@ -6,33 +6,11 @@
             <th>Animal ID</th>
             <th>Location</th>
             <th>Spotted By</th>
+            <th>Date</th>
             </thead>
         {{#if sighting}}
             {{#each sighting }}
-                <tr><td>{{animal_id}}</td>{{location}}<td>{{ranger_name}}</td><td>Today</td></tr>
-<!--                <div class="card card-transparent">
-                    <div class="card-body">
-                        <div class="attributes">
-                            <div class="animal-attributes" style="font-size:15px;">
-                                <img class="avatar" src="/images/animals/1.jpeg"><br>
-                            </div>
-
-                            <div class="animal-attributes">
-                                <a><h1 style="font-family: 'Patua One', cursive;text-transform: uppercase;">{{animal_id}}</h1></a>
-                                <p><b>Sighting reported in:</b> {{location}}</p>
-                                <p><b>Spotted by:</b>{{ranger_name}}</p>
-
-
-
-                            </div>
-
-                        </div>
-
-
-                    </div>
-
-                </div>-->
-
+                <tr><td>{{animal_id}}</td>{{location}}<td>{{ranger_name}}</td><td></td><td>Today</td></tr>
             {{/each}}
         {{else}}
             <p>No Players Yet!</p>
